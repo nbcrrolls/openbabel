@@ -1,0 +1,57 @@
+<chapter id="installing" xreflabel="Installing">
+<title>Installing the Openbabel roll</title>
+
+<section id="requirements" xreflabel="Requirements">
+<title>Rocks Version</title>
+
+<para>
+The Openbabel Roll is for use with Rocks version &document-version;.
+The Babel Roll is does not require any other rolls.
+Compatiblity has been verified with the following rolls:
+<itemizedlist>
+<listitem><para>AutoClickChem</para></listitem>
+</itemizedlist>
+</para>
+
+</section>
+
+&source-roll-installing-standard;
+
+<section id="installing-running-server" xreflabel="On an existing server">
+<title>Adding roll to the existing server</title>
+<para>
+The Openbabel roll can be added to an existing server (frontend).
+Assume that you have an ISO image of the roll called babel.iso.
+The following procedure will install the roll:
+<screen>
+# rocks add roll babel.iso
+# rocks enable roll babel
+# cd /export/rocks/install
+# rocks create distro
+# rocks run roll babel | /bin/sh
+</screen>
+</para>
+</section>
+
+<section id="installing-nodes" xreflabel="Adding the roll to the nodes">
+<title>Adding the roll to the nodes</title>
+
+<para>
+To add the the Openbabel roll to the nodes of your cluster, you'll
+need to reinstall the nodes.
+</para>
+
+<para>
+To reinstall all your nodes, as root execute:
+</para>
+
+<para>
+<screen>
+# rocks set host compute boot action=install
+# rocks run host compute command=reboot
+</screen>
+</para>
+
+</section>
+
+</chapter>

@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no" ?>
+
+<kickstart>
+
+	<description>
+	Openbabel Configuration
+	</description>
+
+	<copyright>
+	</copyright>
+
+	<changelog>
+	</changelog>
+
+	<package>openbabel</package>
+	<package>rocks-openbabel</package>
+	<package>roll-openbabel-usersguide</package>
+
+<post>
+</post>
+
+</kickstart>
+

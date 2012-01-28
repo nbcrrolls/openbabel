@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+    <description>
+    Openbabel Roll
+
+    </description>
+
+    <copyright>
+    </copyright>
+
+    <changelog>
+    $Log: openbabel.xml,v $
+    Revision 1.1  2012/01/28 00:57:51  nadya
+    initial
+
+    </changelog>
+
+    <edge from="server" to="openbabel-server" />
+    <edge from="client" to="openbabel-client" />
+
+</graph>
+
