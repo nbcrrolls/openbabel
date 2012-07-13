@@ -1,20 +1,26 @@
 #
-# $Id: Makefile,v 1.1 2012/01/28 00:57:52 nadya Exp $
+# $Id: Makefile,v 1.2 2012/07/13 19:35:56 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.2  2012/07/13 19:35:56  nadya
+# use common place for version
+#
 # Revision 1.1  2012/01/28 00:57:52  nadya
 # initial
 #
 #
 
-PKGROOT		= /opt/cadd/openbabel
+PKGROOT		= /opt/openbabel-$(VERSION)
 REDHAT.ROOT     = $(CURDIR)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
 
+
+version.mk:
+	cat ../version.mk version.mk.in > version.mk
 
 build:
 	mkdir -p build
@@ -32,7 +38,9 @@ install::
 		cd build;					\
 		make DESTDIR=$(ROOT) install;	\
 	)
+	(cd $(ROOT)/opt; ln -s openbabel-$(VERSION) openbabel)
 
 clean::
 	rm -rf $(NAME)-$(VERSION)
 	rm -rf build
+	rm -rf version.mk
