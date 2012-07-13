@@ -12,13 +12,23 @@
 
     <changelog>
     $Log: openbabel.xml,v $
+    Revision 1.2  2012/07/13 19:34:38  nadya
+    add opal deployment
+
     Revision 1.1  2012/01/28 00:57:51  nadya
     initial
 
     </changelog>
 
-    <edge from="server" to="openbabel-server" />
-    <edge from="client" to="openbabel-client" />
+    <edge from="server" to="openbabel-common" />
+    <edge from="client" to="openbabel-common" />
+
+    <!-- opal deployment -->
+    <edge from="client" to="openbabel-server" cond="opal_server"/>
+    <edge from="server" to="openbabel-server"/>
+    <order head="opal-common">
+        <tail>openbabel-server</tail>
+    </order>
 
 </graph>
 
