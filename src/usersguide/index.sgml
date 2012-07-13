@@ -11,15 +11,6 @@
 <bookinfo>
 
 	<title> Openbabel Roll: Users Guide </title>
-
-        <subtitle>
-                <inlinemediaobject>
-                        <imageobject>
-                                <imagedata fileref="">
-                        </imageobject>
-                </inlinemediaobject>
-        </subtitle>
-
 	<edition>Version &document-version;</edition>
 	<pubdate>&document-pubdate;</pubdate>
 	<copyright id="copyright" xreflabel="copyright">
