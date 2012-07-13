@@ -1,0 +1,110 @@
+<appConfig xmlns="http://nbcr.sdsc.edu/opal/types"
+	   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata appName="Openbabel 2.3.1">
+    <usage><![CDATA[Open Babel is a command line utility designed to interconvert between many file formats used in molecular modeling, computational chemistry, and many related areas]]></usage>
+    <info xsd:type="xsd:string">
+      <![CDATA[
+	       Usage: babel [-i <input-ID>] infile [-o <output-ID>] [outfile] [OPTIONS]
+	       OPTIONS:
+	       -d	Delete hydrogens (make all hydrogen implicit)
+	       -h	Add hydrogens (make all hydrogen explicit)
+	       -p <pH>	Add hydrogens appropriate for pH (use transforms in phmodel.txt)
+	       -c	Center atomic coordinates at (0,0,0)
+      ]]>
+    </info>
+
+    <types>
+
+      <!-- list of flags -->
+      <flags>
+	<flag>
+	  <id>delete_h</id>
+	  <tag>-d</tag>
+	  <textDesc>Delete Hydrogens</textDesc>
+	</flag>
+
+	<flag>
+	  <id>add_h</id>
+	  <tag>-h</tag>
+	  <textDesc>Add Hydrogens</textDesc>
+	</flag>
+
+	<flag>
+	  <id>add_h_pH</id>
+	  <tag>-p</tag>
+	  <textDesc>Add Hydrogens appropriate for pH (use transforms in phmodel.txt)</textDesc>
+	</flag>
+
+	<flag>
+	  <id>center_coords</id>
+	  <tag>-c</tag>
+	  <textDesc>Center atomic coordinates</textDesc>
+	</flag>
+
+	<flag>
+	  <id>xml_cml</id>
+	  <tag>-x[flags]</tag>
+	  <textDesc> 
+	    <![CDATA[
+		     <pre>
+		     For example: write options for CML: -x[flags] (e.g. -x1ac)  
+		     1 output CML V1.0 (default)
+		     2 output CML V2.0 (Schema)
+		     a output array format for atoms and bonds (default <atom>)
+		     p prettyprint output (not implemented)
+		     n output namespace (default no namespace)
+		     c use 'cml' as output namespace prefix (else default) (forces n)
+		     d output DOCTYPE (default none)
+		     g debug output
+		     v add XML version (declaration)
+		     </pre>
+	    ]]>
+	  </textDesc>
+	</flag>
+      </flags>
+
+      <!-- list of tagged parameters -->
+      <taggedParams>
+
+	<param>
+	  <id>input</id>
+	  <tag>-i(format id)</tag>
+	  <paramType>FILE</paramType>
+	  <ioType>INPUT</ioType>
+	  <required>true</required>
+	  <textDesc>
+	    <![CDATA[
+	     <pre>
+	     Input file name and format.
+	     OpenBabel has support for 118 formats in total.
+	     It can read 88 formats.
+	     </pre>
+	    ]]>
+	  </textDesc>
+	</param>
+
+	<param>
+	  <id>output</id>
+	  <tag>-o(format id)</tag>
+	  <paramType>FILE</paramType>
+	  <ioType>OUTPUT</ioType>
+	  <required>true</required>
+	  <textDesc>
+	    <![CDATA[
+	     <pre>
+	     Output file name and format.
+	     OpenBabel has support for 118 formats in total.
+	     It can write 89 formats.
+	     </pre>
+	    ]]>
+	  </textDesc>
+	</param>
+
+      </taggedParams>
+    </types>
+
+  </metadata>
+  <binaryLocation>/opt/openbabel/bin/babel</binaryLocation>
+  <defaultArgs></defaultArgs>
+  <parallel>false</parallel>
+</appConfig>
