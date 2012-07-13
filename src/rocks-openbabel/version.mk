@@ -1,3 +1,2 @@
-NAME = rocks-openbabel
-RELEASE = 0
-
+NAME    = rocks-openbabel
+RELEASE	= 0

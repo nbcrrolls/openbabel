@@ -1,5 +1,6 @@
-#
-if [ -d /opt/babel/bin ]; then
-        export PATH=$PATH:/opt/babel/bin
+# openbabel roll
+
+if [ -d /opt/openbabel/bin ]; then
+        export PATH=$PATH:/opt/openbabel/bin
 fi
 

@@ -1,5 +1,6 @@
-#
-if ( -d /opt/babel/bin ) then
-        setenv PATH "${PATH}:/opt/babel/bin"
+# openbabel roll
+
+if ( -d /opt/openbabel/bin ) then
+        setenv PATH "${PATH}:/opt/openbabel/bin"
 endif
 
