@@ -1,10 +1,13 @@
 #
-# $Id: Makefile,v 1.2 2012/07/13 19:35:56 nadya Exp $
+# $Id: Makefile,v 1.3 2012/07/14 01:42:53 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.3  2012/07/14 01:42:53  nadya
+# add wrapper script
+#
 # Revision 1.2  2012/07/13 19:35:56  nadya
 # use common place for version
 #
@@ -39,6 +42,8 @@ install::
 		make DESTDIR=$(ROOT) install;	\
 	)
 	(cd $(ROOT)/opt; ln -s openbabel-$(VERSION) openbabel)
+	mkdir -p $(ROOT)/$(PKGROOT)/bin
+	install -m755 openbabel.sh $(ROOT)/$(PKGROOT)/bin
 
 clean::
 	rm -rf $(NAME)-$(VERSION)
