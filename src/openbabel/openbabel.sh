@@ -5,6 +5,9 @@ flags=""
 
 while [ "$1" != "" ]; do
     case $1 in
+        --gen3d)               
+             flags="$flags --gen3d"
+             ;;
         -d)               
              flags="$flags -d"
              ;;
@@ -48,7 +51,7 @@ if test -z "$ifile"; then
   exit 1
 fi
 
-if test ! -z "$ofile"; then
+if test  -z "$ofile"; then
   ofile="output"
 fi
 
