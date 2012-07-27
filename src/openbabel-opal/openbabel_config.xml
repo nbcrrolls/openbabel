@@ -19,6 +19,12 @@
       <!-- list of flags -->
       <flags>
 	<flag>
+	  <id>gen3d</id>
+	  <tag>--gen3d</tag>
+	  <textDesc>Generate 3D</textDesc>
+	</flag>
+
+	<flag>
 	  <id>delH</id>
 	  <tag>-d</tag>
 	  <textDesc>Delete Hydrogens</textDesc>
@@ -125,7 +131,7 @@
 
         <group>
           <name>inputFlags</name>
-          <elements>delH addH addHpH centerCoords </elements>
+          <elements>gen3d delH addH addHpH centerCoords </elements>
           <textDesc>Options</textDesc>
         </group>
 
