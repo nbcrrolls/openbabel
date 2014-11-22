@@ -1,2 +1,2 @@
-PKGROOT         = /opt/opal/deployed/
+PKGROOT         = /opt/tomcat/deployed/
 NAME            = openbabel-opal
